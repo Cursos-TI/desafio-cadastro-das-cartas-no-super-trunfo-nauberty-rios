@@ -2,48 +2,25 @@
 #include "CartasSuperTrunfo.h"
 #include <string.h>
 
-
-
-
-// Software do jogo Super Trunfo
-// Passei boas madrugadas tentando resolver o porque quando eu declarava os nomes em %s string nao funcionava o codigo 
-//de resto esta tudo funcionando !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-
-
-
-//ttps://ideal-goldfish-r4xpr9j47r6xfw5pj.github.dev/ link do primeiro trabalho
-
 int main() {
-    int rank; 
-    char nome[50];
-    int populacao;
-    float area;
-    float pib;
-    int pturisticos;
-    float dpopulacional;
-    float pibcapita;
-
-
-    int rankseg; 
-    char nomeseg[50];
-    int populacaoseg;
-    float areaseg;
-    float pibseg;
-    int pturisticosseg;
-    float dpopulacionalseg;
-    float pibcapitaseg;
-
-
+    float rank1, rank2; //È O "SUPER PODER"
+    char nome[50], nomeseg[50], rank;
+    unsigned long int populacao, populacaoseg, gp;
+    float area, areaseg;
+    float pib, pibseg;
+    int pturisticos, pturisticosseg, gt;
+    float dpopulacional, dpopulacionalseg;
+    float pibcapita, pibcapitaseg;
+    int resultado, resultadoseg, gc, gd, gpb, ga;
 
 printf("Oque acha de cadastrar suas cartas comigo. Bom vamos la:\n" );
 printf("Cadastre o nome da cidade:\n ");
 scanf("%s", &nome);
 
 printf("Informe o numero de habitantes dessa cidade:\n ");
-scanf("%d", &populacao);
+scanf("%lu", &populacao);
 
-printf("Informe a area que essa cidade cobre:\n ");
+printf("Informe a área que essa cidade cobre:\n ");
 scanf("%f", &area);
 
 printf("Informe o pib dessa cidade:\n ");
@@ -52,57 +29,92 @@ scanf("%f", &pib);
 printf("Me diga quantos pontos turisticos tem nessa cidade.\n");
 scanf("%d", &pturisticos);
 
-//("De acordo com as informações vamos calcular a Densidade Populacional.")
-dpopulacional = populacao / area;
-
-//"Tambem vamos calcular o PIB per Capita:")
-pibcapita = pib / populacao;
-
 printf("Vamos cadastrar a segunda carta!!\n\n");
 
 printf("Diga o nome da proxima cidade:\n");
 scanf("%s", &nomeseg);
 
 printf("Informe o numero de habitantes dessa cidade:\n ");
-scanf("%d", &populacaoseg);
+scanf("%lu", &populacaoseg);
 
-printf("Informe a area que essa cidade cobre:\n ");
+printf("Informe a área que essa cidade cobre:\n ");
 scanf("%f", &areaseg);
 
 printf("Informe o pib dessa cidade:\n ");
 scanf("%f", &pibseg);
 
-printf("Me diga quantos pontos turisticos tem nessa cidade:\n\n");
+printf("Me diga quantos pontos turisticos tem nessa cidade:\n");
 scanf("%d", &pturisticosseg);
 
-//("De acordo com as informações vamos calcular a Densidade Populacional.")
-dpopulacional = populacaoseg / areaseg;
-
-//"Tambem vamos calcular o PIB per Capita:")
+dpopulacional = populacao / area;
+pibcapita = pib / populacao;
+dpopulacionalseg = populacaoseg / areaseg;
 pibcapitaseg = pibseg / populacaoseg;
+
+rank1 = (populacao + area + pib + pturisticos + pibcapita + resultadoseg); 
+rank2 = (populacaoseg + areaseg + pibseg + pturisticosseg + pibcapitaseg + resultadoseg);
+
+resultadoseg += 10(dpopulacional > dpopulacionalseg);
+resultadoseg += 10(dpopulacional< dpopulacionalseg);
+
+
+// USEI AQUI O IF E O ELSE SÒ PARA TERMINAR O "RANK" DE RESTO EU SEGUI A AULA
+// O RANK SEGUE O PADRÂO DE "SUPER PODER" SOMANDO TODAS AS CARTAS
+// VOU FAZER UMA ESTRUTURA QUE VAI DIMINUIR 100 PONTO DO VALOR DA CARTA QUE TIVER MAIS "DENSIDADE POPULACIONAL" ASSIM MOSTRANDO O RANK DA CARTA
+
+//if (rank1 < 2.147.483.646){
+ //   rank = s;
+//}else if (rank1 < 536.870.911){
+  //  rank = a;
+//}else if (rank1 < 178.956.970){
+  //  rank = b;
+//}else {rank = c;
+//}
+//printf("classificaçao é %s", rank);
+
 
 printf("Cadastro concluido com sucesso!!\n\n");
 
+printf("Rank: %d\n",rank1);
 printf("Carta 1\n");
 printf("Estado: A\n");
 printf("Código: A01\n");
 printf("Nome da cidade: %s\n", nome);
-printf("população: %d \n", populacao);
+printf("população: %lu \n", populacao);
 printf("Área: %f km² \n", area);
 printf("PIB: %f bilhões de reais \n", pib);
 printf("Número de pontos turísticos: %d\n", pturisticos);
 printf("Densidade Populacional: %f hab/km²\n", dpopulacional);
-printf("PIB per Capita: %f reais\n", pibcapita);
+printf("PIB per Capita: %f reais\n\n", pibcapita);
 
-printf("\n\nCarta 2\n");
+
+printf("Rank: %d\n",rank2);
+printf("Carta 2\n");
 printf("Estado: B\n");
 printf("Código: B02\n");
 printf("Nome da cidade: %s \n", nomeseg);
-printf("população: %d \n", populacaoseg);
+printf("população: %lu \n", populacaoseg);
 printf("Área: %f km² \n", areaseg);
 printf("PIB %f bilhões de reais \n", pibseg);
-printf("Número de pontos turísticos: %d\n\n", pturisticosseg);
+printf("Número de pontos turísticos: %d\n", pturisticosseg);
 printf("Densidade Populacional: %f hab/km²\n", dpopulacionalseg);
-printf("PIB per Capita: %f reais\n", pibcapitaseg);
+printf("PIB per Capita: %f reais\n\n", pibcapitaseg);
+
+printf("Batalha de cartas\n\n");
+//printf("Rank:%f\n"resultado);
+resultado = rank1 > rank2;
+printf("População:%lu\n", gp);
+gp = populacao > populacaoseg;
+printf("Área: %d\n", ga);
+ga = area > areaseg;
+printf("PIB:%d\n", gpb);
+gpb = pib > pibseg;
+printf("Pontos Turísticos:%d\n", gt);
+gt = pturisticos > pturisticosseg;
+printf("Densidade Populacional:%d\n", gd);
+gd = dpopulacional > dpopulacionalseg;
+printf("PIB per Capita:%d\n", gc);
+gc = pibcapita > pibcapitaseg;
+
 return 0;
 }
