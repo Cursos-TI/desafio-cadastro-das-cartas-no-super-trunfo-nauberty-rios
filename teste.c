@@ -3,19 +3,20 @@
 
 int main(void){
 
-int i;
+float i;
 float dpopulacional, dpopulacionalseg;
-
-
 
 printf("escolhe");
 scanf("%f",&dpopulacional);
 printf("escolhe");
 scanf("%f",&dpopulacionalseg);
-if (i= dpopulacional > dpopulacionalseg):{
-   i += 100;}
- else:{
-   i = 0;}
+
+
+
+if (dpopulacional > dpopulacionalseg){
+  scanf("%f", &i += 100;)
+}else:{
+   i += 300;}
 
 //i += 10(dpopulacional< dpopulacionalseg);
 

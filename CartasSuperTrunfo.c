@@ -3,15 +3,15 @@
 #include <string.h>
 
 int main() {
-    float rank1, rank2; //È O "SUPER PODER"
-    char nome[50], nomeseg[50], rank;
+    float rank, rank1, rank2, resultadoseg; //È O "SUPER PODER"
+    char nome[50], nomeseg[50];
     unsigned long int populacao, populacaoseg, gp;
-    float area, areaseg;
-    float pib, pibseg;
-    int pturisticos, pturisticosseg, gt;
-    float dpopulacional, dpopulacionalseg;
-    float pibcapita, pibcapitaseg, resultadoseg;
-    int resultado, , gc, gd, gpb, ga;
+    //float area, areaseg;
+    float pib, pibseg, area, areaseg;
+    int pturisticos, pturisticosseg, gt, gc, gd, gpb, ga;
+    float dpopulacional, dpopulacionalseg, pibcapita, pibcapitaseg;
+    //float pibcapita, pibcapitaseg,;
+    //int gc, gd, gpb, ga;
 
 printf("Oque acha de cadastrar suas cartas comigo. Bom vamos la:\n" );
 printf("Cadastre o nome da cidade:\n ");
@@ -50,34 +50,13 @@ dpopulacional = populacao / area;
 pibcapita = pib / populacao;
 dpopulacionalseg = populacaoseg / areaseg;
 pibcapitaseg = pibseg / populacaoseg;
-
-rank1 = (populacao + area + pib + pturisticos + pibcapita + resultadoseg); 
-rank2 = (populacaoseg + areaseg + pibseg + pturisticosseg + pibcapitaseg + resultadoseg);
-
-
-
-resultadoseg += 10(dpopulacional > dpopulacionalseg);
-resultadoseg += 10(dpopulacional< dpopulacionalseg);
-
-
-// USEI AQUI O IF E O ELSE SÒ PARA TERMINAR O "RANK" DE RESTO EU SEGUI A AULA
-// O RANK SEGUE O PADRÂO DE "SUPER PODER" SOMANDO TODAS AS CARTAS
-// VOU FAZER UMA ESTRUTURA QUE VAI DIMINUIR 100 PONTO DO VALOR DA CARTA QUE TIVER MAIS "DENSIDADE POPULACIONAL" ASSIM MOSTRANDO O RANK DA CARTA
-
-//if (rank1 < 2.147.483.646){
- //   rank = s;
-//}else if (rank1 < 536.870.911){
-  //  rank = a;
-//}else if (rank1 < 178.956.970){
-  //  rank = b;
-//}else {rank = c;
-//}
-//printf("classificaçao é %s", rank);
-
-
+ 
 printf("Cadastro concluido com sucesso!!\n\n");
 
-printf("Rank: %d\n",rank1);
+rank1 = (populacao + area + pib + pturisticos + pibcapita); 
+rank2 = (populacaoseg + areaseg + pibseg + pturisticosseg + pibcapitaseg);
+
+printf("Rank: %f\n",rank1);
 printf("Carta 1\n");
 printf("Estado: A\n");
 printf("Código: A01\n");
@@ -90,7 +69,7 @@ printf("Densidade Populacional: %f hab/km²\n", dpopulacional);
 printf("PIB per Capita: %f reais\n\n", pibcapita);
 
 
-printf("Rank: %d\n",rank2);
+printf("Rank: %f\n",rank2);
 printf("Carta 2\n");
 printf("Estado: B\n");
 printf("Código: B02\n");
@@ -103,19 +82,20 @@ printf("Densidade Populacional: %f hab/km²\n", dpopulacionalseg);
 printf("PIB per Capita: %f reais\n\n", pibcapitaseg);
 
 printf("Batalha de cartas\n\n");
-//printf("Rank:%f\n"resultado);
-resultado = rank1 > rank2;
-printf("População:%lu\n", gp);
+
+printf("Rank: Carta 1 venceu (%f)\n", rank);
+rank = rank1 > rank2;
+printf("População: Carta 1 venceu (%lu)\n", gp);
 gp = populacao > populacaoseg;
-printf("Área: %d\n", ga);
+printf("Área: Carta 1 venceu (%d)\n", ga);
 ga = area > areaseg;
-printf("PIB:%d\n", gpb);
+printf("PIB: Carta 1 venceu (%d)\n", gpb);
 gpb = pib > pibseg;
-printf("Pontos Turísticos:%d\n", gt);
+printf("Pontos Turísticos: Carta 1 venceu (%d)\n", gt);
 gt = pturisticos > pturisticosseg;
-printf("Densidade Populacional:%d\n", gd);
-gd = dpopulacional > dpopulacionalseg;
-printf("PIB per Capita:%d\n", gc);
+printf("Densidade Populacional: Carta 1 venceu (%d)\n", gd);
+gd = dpopulacional < dpopulacionalseg;
+printf("PIB per Capita: Carta 1 venceu (%d)\n", gc);
 gc = pibcapita > pibcapitaseg;
 
 return 0;
