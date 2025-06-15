@@ -10,8 +10,8 @@ int main() {
     float pib, pibseg;
     int pturisticos, pturisticosseg, gt;
     float dpopulacional, dpopulacionalseg;
-    float pibcapita, pibcapitaseg;
-    int resultado, resultadoseg, gc, gd, gpb, ga;
+    float pibcapita, pibcapitaseg, resultadoseg;
+    int resultado, , gc, gd, gpb, ga;
 
 printf("Oque acha de cadastrar suas cartas comigo. Bom vamos la:\n" );
 printf("Cadastre o nome da cidade:\n ");
@@ -53,6 +53,8 @@ pibcapitaseg = pibseg / populacaoseg;
 
 rank1 = (populacao + area + pib + pturisticos + pibcapita + resultadoseg); 
 rank2 = (populacaoseg + areaseg + pibseg + pturisticosseg + pibcapitaseg + resultadoseg);
+
+
 
 resultadoseg += 10(dpopulacional > dpopulacionalseg);
 resultadoseg += 10(dpopulacional< dpopulacionalseg);

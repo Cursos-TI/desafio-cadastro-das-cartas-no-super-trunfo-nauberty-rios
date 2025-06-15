@@ -2,21 +2,22 @@
 #include <string.h>
 
 int main(void){
+
 int i;
-printf("F = ");
-scanf("%d",&i);
-switch (1)
-{
-case 0: printf("Maca");
-break;
-case 10: printf("Abacate");
-break;
-case 20: printf("Banana");
-break;
-case 30: printf("Pera");
-break;
-case 40: printf("Uva");
-break;
-default: printf("Caju");
-}
+float dpopulacional, dpopulacionalseg;
+
+
+
+printf("escolhe");
+scanf("%f",&dpopulacional);
+printf("escolhe");
+scanf("%f",&dpopulacionalseg);
+if (i= dpopulacional > dpopulacionalseg):{
+   i += 100;}
+ else:{
+   i = 0;}
+
+//i += 10(dpopulacional< dpopulacionalseg);
+
+printf("o Resultado é:%d", i);
 }
