@@ -83,43 +83,61 @@ printf("Batalha de cartas\n\n");
 
 if(rank1 > rank2 ){
 printf("Rank: Carta 1 (%s) venceu\n", nome);
-}else {
-printf("Rank: Carta 2 (%s) venceu \n", nomeseg);}
+}else if (rank1 < rank2){
+printf("Rank: Carta 2 (%s) venceu \n", nomeseg);
+}else{
+printf("Houve um erro com o nome da cidade!\n");
+}
+
 
 if(populacao > populacaoseg){
-printf("População: Carta 1 (%lu) venceu \n", populacao);
+printf("População: Carta 1 com (%lu) venceu \n", populacao);
+}else if (populacao < populacaoseg){
+printf("População: Carta 2  com (%lu) venceu \n",populacaoseg);
 }else{
-printf("População: Carta 2 (%lu) venceu \n",populacaoseg);}
+printf("Houve um empate!\n");
+}
 
 if(area > areaseg){
-printf("Área: Carta 1 (%d) venceu \n", area);
+printf("Área: Carta 1 com (%f) venceu \n", area);
+}else if (area < areaseg){
+printf("Áera: Carta 2 com (%f) venceu \n", areaseg);
 }else{
-printf("Áera: Carta 2 (%d) venceu \n", areaseg);}
+printf("Houve um empate!\n");
+}
 
 if(pib > pibseg){
-printf("PIB: Carta 1 (%d) venceu \n", pib);
+printf("PIB: Carta 1 com (%f) venceu \n", pib);
+}else if (pib < pibseg){
+printf("PIB: Carta 2 com (%f) venceu \n",pibseg);
 }else{
-printf("PIB: Carta 2 (%d) venceu \n",pibseg);}
-
-
+printf("Houve um empate!\n");
+}
 
 if(pturisticos > pturisticosseg){
-printf("Pontos Turísticos: Carta 1 (%d) venceu \n", pturisticos);
+printf("Pontos Turísticos: Carta 1 com (%d) venceu \n", pturisticos);
+}else if (pturisticos < pturisticosseg){
+printf("Pontos Turísticos: Carta 2 com (%d) venceu \n", pturisticosseg);
 }else{
-printf("Pontos Turísticos: Carta 2 (%d) venceu \n", pturisticosseg);}
-
-
+printf("Houve um empate!\n");
+}
 
 if(dpopulacional < dpopulacionalseg){
-printf("Densidade Populacional: Carta 1 (%d) venceu \n", dpopulacional);
+printf("Densidade Populacional: Carta 1 com (%f) venceu \n", dpopulacional);
+}else if (dpopulacional > dpopulacionalseg){
+printf("Densidade Populacional: Carta 2 com (%f) venceu \n", dpopulacionalseg);
 }else{
-printf("Densidade Populacional: Carta 2 (%d) venceu \n", dpopulacionalseg);}
+printf("Houve um empate!\n");
+}
 
 if(pibcapita > pibcapitaseg){
-printf("PIB per Capita: Carta 1 (%d) venceu\n", pibcapita);
+printf("PIB per Capita: Carta 1 com (%f) venceu\n", pibcapita);
+}else if (pibcapita < pibcapitaseg){
+printf("PIB per Capita: Carta 2 com (%f) venceu\n\n\n", pibcapita);
 }else{
-printf("PIB per Capita: Carta 2 (%d) venceu\n\n\n", pibcapita);
+printf("Houve um empate!\n");
 }
+
 
 return 0;
 }
