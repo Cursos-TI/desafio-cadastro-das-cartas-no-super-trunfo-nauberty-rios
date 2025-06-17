@@ -67,7 +67,7 @@ printf("Densidade Populacional: %f hab/km²\n", dpopulacional);
 printf("PIB per Capita: %f reais\n\n", pibcapita);
 
 
-(printf("Rank: %f\n",rank2);
+printf("Rank: %f\n",rank2);
 printf("Carta 2\n");
 printf("Estado: B\n");
 printf("Código: B02\n");
@@ -77,7 +77,7 @@ printf("Área: %f km² \n", areaseg);
 printf("PIB %f bilhões de reais \n", pibseg);
 printf("Número de pontos turísticos: %d\n", pturisticosseg);
 printf("Densidade Populacional: %f hab/km²\n", dpopulacionalseg);
-printf("PIB per Capita: %f reais\n\n", pibcapitaseg);)
+printf("PIB per Capita: %f reais\n\n", pibcapitaseg);
 
 printf("Batalha de cartas\n\n");
 
