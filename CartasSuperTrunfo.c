@@ -3,17 +3,15 @@
 #include <string.h>
 
 int main() {
-    float rank, rank1, rank2, resultadoseg; //È O "SUPER PODER"
+    float rank1, rank2, resultadoseg; //È O "SUPER PODER"
     char nome[50], nomeseg[50];
-    unsigned long int populacao, populacaoseg, gp;
-    //float area, areaseg;
+    unsigned long int populacao, populacaoseg;
     float pib, pibseg, area, areaseg;
-    int pturisticos, pturisticosseg, gt, gc, gd, gpb, ga;
+    int pturisticos, pturisticosseg;
     float dpopulacional, dpopulacionalseg, pibcapita, pibcapitaseg;
-    //float pibcapita, pibcapitaseg,;
-    //int gc, gd, gpb, ga;
 
-printf("Oque acha de cadastrar suas cartas comigo. Bom vamos la:\n" );
+
+printf("Oque acha de cadastrar suas cartas comigo. Bom vamos la:\n ");
 printf("Cadastre o nome da cidade:\n ");
 scanf("%s", &nome);
 
@@ -56,7 +54,7 @@ printf("Cadastro concluido com sucesso!!\n\n");
 rank1 = (populacao + area + pib + pturisticos + pibcapita); 
 rank2 = (populacaoseg + areaseg + pibseg + pturisticosseg + pibcapitaseg);
 
-printf("Rank: %f\n",rank1);
+/*printf("Rank: %f\n",rank1);
 printf("Carta 1\n");
 printf("Estado: A\n");
 printf("Código: A01\n");
@@ -66,10 +64,10 @@ printf("Área: %f km² \n", area);
 printf("PIB: %f bilhões de reais \n", pib);
 printf("Número de pontos turísticos: %d\n", pturisticos);
 printf("Densidade Populacional: %f hab/km²\n", dpopulacional);
-printf("PIB per Capita: %f reais\n\n", pibcapita);
+printf("PIB per Capita: %f reais\n\n", pibcapita);*/
 
 
-printf("Rank: %f\n",rank2);
+/*(printf("Rank: %f\n",rank2);
 printf("Carta 2\n");
 printf("Estado: B\n");
 printf("Código: B02\n");
@@ -79,24 +77,45 @@ printf("Área: %f km² \n", areaseg);
 printf("PIB %f bilhões de reais \n", pibseg);
 printf("Número de pontos turísticos: %d\n", pturisticosseg);
 printf("Densidade Populacional: %f hab/km²\n", dpopulacionalseg);
-printf("PIB per Capita: %f reais\n\n", pibcapitaseg);
+printf("PIB per Capita: %f reais\n\n", pibcapitaseg);)*/
 
 printf("Batalha de cartas\n\n");
 
-printf("Rank: Carta 1 venceu (%f)\n", rank);
-rank = rank1 > rank2;
-printf("População: Carta 1 venceu (%lu)\n", gp);
-gp = populacao > populacaoseg;
-printf("Área: Carta 1 venceu (%d)\n", ga);
-ga = area > areaseg;
-printf("PIB: Carta 1 venceu (%d)\n", gpb);
-gpb = pib > pibseg;
-printf("Pontos Turísticos: Carta 1 venceu (%d)\n", gt);
-gt = pturisticos > pturisticosseg;
-printf("Densidade Populacional: Carta 1 venceu (%d)\n", gd);
-gd = dpopulacional < dpopulacionalseg;
-printf("PIB per Capita: Carta 1 venceu (%d)\n", gc);
-gc = pibcapita > pibcapitaseg;
+if(rank1 > rank2 ){
+printf("Rank: Carta 1 venceu (%f)\n", rank1);
+}else 
+printf("Rank: Carta 2 venceu(%f)\n", rank2);}
+
+if(populacao > populacaoseg){
+printf("População: Carta 1 venceu (%lu)\n", populacao);
+}else{
+printf("População: Carta 2 Venceu(%lu)\n",populacaoseg);}
+
+if(area > areaseg){
+printf("Área: Carta 1 venceu (%d)\n", area);
+}else{
+printf("Áera: Carta 2 venceu(%d)\n", areaseg);}
+
+if(pib > pibseg){
+printf("PIB: Carta 1 venceu (%d)\n", pib);
+}else{
+printf("PIB: Carta 2 venceu (%d)\n",pibseg);}
+
+if(pturisticos > pturisticosseg){
+printf("Pontos Turísticos: Carta 1 venceu (%d)\n", pturistico);
+}else{
+printf("Pontos Turísticos: Carta 2 venceu (%d)\n", pturisticoseg);}
+
+if(dpopulacional < dpopulacionalseg){
+printf("Densidade Populacional: Carta 1 venceu (%d)\n", dpopulacional);
+}else{
+printf("Densidade Populacional: Carta 2 venceu (%d)\n", dpopulacionalseg);}
+
+if(pibcapita > pibcapitaseg){
+printf("PIB per Capita: Carta 1 venceu (%d)\n", pibcapita);
+}else{
+printf("PIB per Capita: Carta 1 venceu (%d)\n", pibcapita);
+}
 
 return 0;
 }
